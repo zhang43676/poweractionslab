@@ -11,11 +11,11 @@ jobs:
     uses: ./.github/workflows/release-solution-with-inputs.yml
     with:
       #You can specify the solution name here
-      solution_name: ALMLab
+      solution_name: TestGitAction
       #Update your values here
-      BUILD_ENVIRONMENT_URL: <BUILD_ENVIRONMENT>
-      PRODUCTION_ENVIRONMENT_URL: <PROD_ENVIRONMENT>
-      CLIENT_ID: <APP_ID>
-      TENANT_ID: <TENANT_ID>      
+      BUILD_ENVIRONMENT_URL: https://org7cf5c181.crm.dynamics.com
+      PRODUCTION_ENVIRONMENT_URL: https://org71c3c28f.crm.dynamics.com
+      CLIENT_ID: dd88953c-13d4-4709-bfa2-5823620ce558
+      TENANT_ID: 3dd9b59d-c73f-40ab-bab3-80e491214bc8      
     secrets:
       envSecret: ${{ secrets.PowerPlatformSPN }}
