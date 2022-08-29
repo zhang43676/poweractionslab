@@ -114,7 +114,7 @@ jobs:
         path: ${{ inputs.solution_release_folder}}
     - name: Import solution to prod env
       #uses: microsoft/powerplatform-actions/import-solution@0.4.0
-      uses: actions/upgrade-solution@0.4.0
+      uses: microsoft/powerplatform-actions/upgrade-solution@v0
       with:
         environment-url: ${{inputs.PRODUCTION_ENVIRONMENT_URL}}
         app-id: ${{inputs.CLIENT_ID}}
