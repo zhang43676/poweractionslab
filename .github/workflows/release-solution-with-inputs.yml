@@ -113,8 +113,8 @@ jobs:
         name: managedSolutions
         path: ${{ inputs.solution_release_folder}}
     - name: Import solution to prod env
-      #uses: microsoft/powerplatform-actions/import-solution@0.4.0
-      uses: microsoft/powerplatform-actions/upgrade-solution@v0
+      uses: microsoft/powerplatform-actions/import-solution@0.4.0
+      #uses: microsoft/powerplatform-actions/upgrade-solution@v0
       with:
         environment-url: ${{inputs.PRODUCTION_ENVIRONMENT_URL}}
         app-id: ${{inputs.CLIENT_ID}}
@@ -122,5 +122,5 @@ jobs:
         tenant-id: ${{inputs.TENANT_ID}}
         solution-file: ${{ inputs.solution_release_folder}}/${{ inputs.solution_name }}.zip
         solution-name: ${{ inputs.solution_name }}
-        #force-overwrite: true
-        #publish-changes: true
+        force-overwrite: true
+        publish-changes: true
